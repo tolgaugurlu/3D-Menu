@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #0a142e;
+  perspective: 40rem;
+}
+.menu {
+  width: 100%;
+  padding: 0 25rem;
+  display: flex;
+  justify-content: space-evenly;
+  transform-style: preserve-3d;
+}
+.change.menu .menu-item {
+  transform: rotateY(0) rotateX(0) translateX(0) translateY(0) translateZ(0);
+  opacity: 1;
+}
+.menu-item {
+  width: 20rem;
+  height: 15rem;
+  background-color: #5588dd;
+  padding: 15px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 2rem rgba(100, 100, 255, 0.4);
+}
+
+.menu-item:hover {
+  background-color: #ccccff;
+  box-shadow: 0 0 8rem rgba(255, 255, 255, 0.6);
+}
+
+.menu-item:not(.center-item) {
+  opacity: 0;
+}
+.menu-item:nth-child(1) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-50rem)
+    translateY(-15rem) translateZ(-50rem);
+  transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 0.5s,
+    box-shadow 0.5s;
+}
+.menu-item:nth-child(2) {
+  transform: rotateY(-70deg) rotateX(20deg) translateX(-20rem) translateY(-5rem)
+    translateZ(-20rem);
+  transition: transform 1s ease-in, opacity 1s ease-in, background-color 0.5s,
+    box-shadow 0.5s;
+}
+.menu-item:nth-child(3) {
+  transform: rotateX(20deg);
+  transition: transform 1s ease-in, background-color 0.5s, box-shadow 0.5s;
+}
+.menu-item:nth-child(4) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(20rem) translateY(-5rem)
+    translateZ(-20rem);
+  transition: transform 1s ease-in, opacity 1s ease-in, background-color 0.5s,
+    box-shadow 0.5s;
+}
+
+.menu-item:nth-child(5) {
+  transform: rotateY(70deg) rotateX(20deg) translateX(50rem) translateY(-15rem)
+    translateZ(-50rem);
+  transition: transform 1.2s ease-in, opacity 1s ease-in, background-color 0.5s,
+    box-shadow 0.5s;
+}
+.menu-item i {
+  font-size: 7rem;
+  color: #222;
+  transition: color 0.5s;
+}
+
+.menu-item:hover i {
+  color: #7f77e6;
+}
